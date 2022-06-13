@@ -103,7 +103,7 @@ const Home = () => {
     const transferRoute = quote.routes[0].route;
 
     sdk.on('TRANSFER', async (transferStatus) => {
-      console.log(transferStatus.error)
+      console.log(transferStatus)
       if (transferStatus.step === 'approve' && transferStatus.status === 'FAILED') {
         alert(transferStatus.error)
       }
